@@ -1,0 +1,375 @@
+/* ===================================================
+   STUDYHUB
+   GLOBAL.CSS v1.0
+=================================================== */
+
+/* ==========================
+   GOOGLE FONTS
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+/* ==========================
+   VARIABLES
+========================== */
+
+:root{
+
+    /* Colores */
+
+    --color-primario:#2563EB;
+    --color-primario-hover:#1D4ED8;
+
+    --color-texto:#1F2937;
+    --color-texto-secundario:#6B7280;
+
+    --color-fondo:#FFFFFF;
+    --color-fondo-secundario:#F8FAFC;
+
+    --color-borde:#E5E7EB;
+
+    --color-hover:#EFF6FF;
+
+    --color-success:#22C55E;
+    --color-warning:#F59E0B;
+    --color-danger:#EF4444;
+
+
+    /* Sombras */
+
+    --sombra-suave:0 2px 8px rgba(0,0,0,.05);
+    --sombra-media:0 8px 25px rgba(15,23,42,.08);
+    --sombra-fuerte:0 20px 50px rgba(15,23,42,.10);
+
+
+    /* Bordes */
+
+    --radio-sm:10px;
+    --radio-md:12px;
+    --radio-lg:20px;
+    --radio-xl:24px;
+    --radio-pill:999px;
+
+
+    /* Transición */
+
+    --transicion:.25s ease;
+
+}
+
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:var(--color-fondo);
+
+    color:var(--color-texto);
+
+    overflow-x:hidden;
+
+    min-width:320px;
+
+}
+
+
+/* ==========================
+   CONTENEDOR
+========================== */
+
+.contenedor{
+
+    width:min(1280px,95%);
+
+    margin:0 auto;
+
+}
+
+
+/* ==========================
+   IMÁGENES
+========================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+
+/* ==========================
+   ENLACES
+========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ==========================
+   BOTONES
+========================== */
+
+button{
+
+    font-family:"Inter",sans-serif;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================
+   INPUTS
+========================== */
+
+input,
+textarea,
+select{
+
+    font-family:"Inter",sans-serif;
+
+    outline:none;
+
+}
+
+
+/* ==========================
+   LISTAS
+========================== */
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+
+/* ==========================
+   MAIN
+========================== */
+
+main{
+
+    width:100%;
+
+}
+
+
+/* ==========================
+   SECCIONES
+========================== */
+
+section{
+
+    width:100%;
+
+}
+
+
+/* ==========================
+   TIPOGRAFÍA
+========================== */
+
+h1{
+
+    font-size:56px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+}
+
+h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+h3{
+
+    font-size:30px;
+
+    font-weight:600;
+
+}
+
+h4{
+
+    font-size:24px;
+
+    font-weight:600;
+
+}
+
+p{
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    color:var(--color-texto-secundario);
+
+}
+
+
+/* ==========================
+   SELECCIÓN
+========================== */
+
+::selection{
+
+    background:#DBEAFE;
+
+    color:#1F2937;
+
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:1200px){
+
+    h1{
+        font-size:48px;
+    }
+
+    h2{
+        font-size:38px;
+    }
+
+    .contenedor{
+        width:min(95%,1280px);
+    }
+
+}
+
+@media (max-width:992px){
+
+    h1{
+        font-size:42px;
+    }
+
+    h2{
+        font-size:34px;
+    }
+
+    p{
+        font-size:17px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    h1{
+        font-size:36px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    h3{
+        font-size:24px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .contenedor{
+        width:92%;
+    }
+
+}
+
+/* ==========================
+   SUBTÍTULO
+========================== */
+
+.subtitulo{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:#EFF6FF;
+
+    color:var(--color-primario);
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+/* =====================================
+   ANIMACIONES
+===================================== */
+
+.animar{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.animar.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
